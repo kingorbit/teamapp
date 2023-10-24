@@ -87,4 +87,89 @@
 .login-button {
   /* Dodaj style przycisku logowania */
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(120, 121, 255);
+}
+
+.main-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tile {
+  background-color: rgb(120, 121, 255);
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+}
+
+/* Nowe style dla przycisków */
+.button {
+  background-color: rgb(120, 121, 255);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #6b6cfc;
+}
+
+.button.selected {
+  background-color: #6b6cfc;
+}
+.user-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #6b6cfc;
+}
+
+.user-icon {
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: ;
+  border: 2px solid;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
 
