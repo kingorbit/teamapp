@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Kalendarz from './calendar'; // Import komponentu Kalendarz
-import Zespol from './team'; // Import komponentu Zespol
-
+import Zespol from './team';
+import Chat from './chat';
+import Statystyki from './stats';
+import Profil from './profile';
+import Ustawienia from './settings';
 
 function MainPage() {
   const userName = 'Jacob Fludrich'; // Zastąp tym swoim imieniem i nazwiskiem
@@ -27,27 +30,35 @@ function MainPage() {
         </div>
         <h1 className="title">Team App</h1>
         <div className="tile-container">
-          <Link to="/calendar" className="tile">
+          <Link to="/kalendarz" className="tile">
             <button className="button">Kalendarz</button>
           </Link>
-          <Link to="/team" className="tile">
+          <Link to="/druzyna" className="tile">
             <button className="button">Drużyna</button>
           </Link>
-          <Link to="/chat" className="tile">
+          <Link to="/chat-zespolu" className="tile">
             <button className="button">Chat Zespołu</button>
           </Link>
-          <Link to="/stats" className="tile">
+          <Link to="/statystyki" className="tile">
             <button className="button">Statystyki</button>
           </Link>
-          <Link to="/profile" className="tile">
+          <Link to="/profil" className="tile">
             <button className="button">Profil</button>
           </Link>
-          <Link to="/settings" className="tile">
+          <Link to="/ustawienia" className= "tile">
             <button className="button">Ustawienia</button>
           </Link>
         </div>
       </div>
+      <Routes>
+        <Route path="/calendar" element={<Kalendarz />} />
+        <Route path="/team" element={<Zespol />} />
+        <Route path="/chat" element={<Chat />} />
+        <Route path="/stats" element={<Statystyki />} />
+        <Route path="/profile" element={<Profil />} />
+        <Route path="/settings" element={<Ustawienia />} />
 
+      </Routes>
     </Router>
   );
 }
